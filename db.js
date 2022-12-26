@@ -13,21 +13,6 @@ connection.connect(function(err){
   console.log("connected!")
 })
  
-//db memorable 추출
-function notice(callback){
-  connection.query('SELECT * FROM memotable ORDER BY desc,',(rows,fields)=>{
-    if (err) throw err;
-    callback(rows);
-  })
-}
- 
-//1202수정 여러개의 모듈을 내보내는 방법 : {}로 묶고 ,를 찍어서 사용한다
-module.exports = {
-  notice
-}
-
-
-
 //메모를 추출할때
 function notice(callback) {
   connection.query("SELECT * FROM memoTable ORDER BY id desc", (err, rows) => {
@@ -65,4 +50,9 @@ function deleteMemo(id, callback) {
       if (err) throw err;
       callback();
   });
+}
+
+//1202수정 여러개의 모듈을 내보내는 방법 : {}로 묶고 ,를 찍어서 사용한다
+module.exports = {
+  notice,insertMemo,getMemoByid,updateMemo,deleteMemo
 }

@@ -32,10 +32,6 @@ const html = `<!doctype html>
     db.getMemo((rows) => {
         res.render("notice_list", { rows: rows }); //ejs의 rows를 받아서 rows라는 이름으로 보낸다
     });
-    // let title = param["title"];
-    // let id = param["writer"];
-    // let pw = param["password"];
-    // let content = param["content"];
   });
 
   // 작성
