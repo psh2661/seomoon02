@@ -25,12 +25,14 @@ const html = `<!doctype html>
   
   //공지사항 연결
   //리스트 페이지
+  router.get("/notice_write", (req, res) => {
+    res.render("notice_write"); 
+  });
   router.get("/notice_list", (req, res) => {
     db.notice((rows) => {
         res.render("notice_list", { rows: rows });
     });
   });
-
   //작성 페이지
   router.post("/notice_write", (req, res) => {
     let param = JSON.parse(JSON.stringify(req.body));
@@ -82,6 +84,7 @@ const html = `<!doctype html>
   router.get('/notice_view',(req, res) => {
     res.render('notice_view'); 
   })
+
   //수정 페이지
   router.post('/notice_fix',(req, res) => {
     let param = JSON.parse(JSON.stringify(req.body));
