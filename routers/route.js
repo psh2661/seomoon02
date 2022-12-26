@@ -28,14 +28,27 @@ const html = `<!doctype html>
   // router.get('/notice_list',(req, res) => {
   //   res.render('notice_list'); 
   // })
-  router.get("/memoList", (req, res) => {
+  router.get("/notice_list", (req, res) => {
     db.getMemo((rows) => {
-        res.render("memoList", { rows: rows }); //ejs의 rows를 받아서 rows라는 이름으로 보낸다
+        res.render("notice_list", { rows: rows }); //ejs의 rows를 받아서 rows라는 이름으로 보낸다
     });
     // let title = param["title"];
     // let id = param["writer"];
     // let pw = param["password"];
     // let content = param["content"];
+  });
+
+  // 작성
+  router.post("/notice_write", (req, res) => {
+    let param = JSON.parse(JSON.stringify(req.body));
+    let date = param['date'];
+    let user_name = param['user_name'];
+    let teg = param['teg'];
+    let title = param['title'];
+    let content = param['content'];
+    db.insertMemo(date, user_name, teg, title, content, () => {
+        res.redirect("/notice_list"); //redirect 에는 / 붙인다
+    });
   });
 
   
