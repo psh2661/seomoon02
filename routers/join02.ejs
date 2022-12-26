@@ -1,0 +1,79 @@
+<section class="w1280">
+  <ul class="join_tit">
+    <li><img class="left_sim" src="img/logo_sim.png"></li>
+    <li><h3> 회원가입 「정보입력」</h3></li>
+    <li><img class="right_sim" src="img/logo_sim.png"></li>
+  </ul>
+  <!-- 회원가입 폼 -->
+  <form id="join02_form" onsubmit="joinform_check()">
+    <table border="1">
+      <!-- 아이디 -->
+      <td>
+        <label class="deco" for="user_id">아이디*</label>
+        <p>※ 6~12자 사이의 영문+숫자로 입력해 주세요.</p>
+      </td>
+      <tr>
+        <td>
+          <input id="user_id" class="" type="text" name="user_id" placeholder="아이디를 입력해주세요.">
+        </td>
+        <!-- <td>
+          <input id="id_check" type="submit" value="중복확인">
+        </td> -->
+      </tr>
+      <!-- 비밀번호 -->
+      <td>
+        <label class="deco" for="user_pw">비밀번호*</label>
+        <p>※ 영문+숫자와 특수문자를 조합하여 입력해 주세요.</p>
+      </td>
+      <tr>
+        <td>
+          <input id="user_pw" class="" type="password" name="user_pw" placeholder="비밀번호를 입력해 주세요.">
+        </td>
+      </tr>
+      <!-- 비밀번호 확인 -->
+      <td>
+        <label class="deco" for="repw">비밀번호 확인*</label>
+      </td>
+      <tr>
+        <td>
+          <input id="repw" class="" type="password" name="repw" placeholder="비밀번호 확인해 주세요.">
+        </td>
+      </tr>
+      <!-- 이름 -->
+      <td>
+        <label class="deco" for="user_name">이름*</label>
+      </td>
+      <tr>
+        <td>
+          <input id="user_name" class="" type="text" name="user_name" placeholder="이름을 이력해주세요.">
+        </td>
+      </tr>
+      <!-- 휴대전화 -->
+      <td>
+        <label class="deco" for="ph_num">휴대전화*</label>
+        <p>※ ‘-’를 제외한 휴대 전화 번호를 입력해 주세요.</p>
+      </td>
+      <tr>
+        <td>
+          <input id="ph_num" class="" type="text" name="ph_num" placeholder="휴대 전화 번호를 입력해 주세요.">
+        </td>
+      </tr>
+      <!-- 이메일 -->
+      <td>
+        <label class="deco" for="user_email">이메일*</label>
+      </td>
+      <tr>
+        <td>
+          <input id="user_email" class="" type="email" name="user_email" placeholder="이메일을 입력해 주세요.">
+        </td>
+      </tr>
+
+      <!-- 확인(제출) -->
+      <tr>
+        <td>
+          <input id="join_ok" type="submit" value="완 료">
+        </td>
+      </tr>
+    </table>
+  </form>
+</section>
