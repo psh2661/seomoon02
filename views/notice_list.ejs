@@ -8,7 +8,7 @@
   <h5>매일 업데이트되는 서문 야시장의 소식들을 한눈에 볼 수 소식들을 한눈에 볼 수 있어요!</h5>
   <!-- board list area -->
   <div id="board-list">
-    <button type="button" class="btn write_btn" onclick="location.href='notice_write';">+ 작성하기</button>
+    <button type="button" class="btn write_btn"onclick="javascript:location.href='notice_write'">+ 작성하기</button>
     <table class="board-table">
       <thead>
         <tr>
@@ -19,18 +19,20 @@
           <th scope="col" class="th-title"></th>
         </tr>
       </thead>
+      <% rows.forEach((row,index)=>{%>
       <tbody class="notice_txt_center notice_wrap">
         <tr>
-          <td>2022.10<br><span class="bold">31</span></td>
-          <td>관리자</td>
+          <td><%= row.date %><br><span class="bold"><%= row.date %></span></td>
+          <td><%= row.user_name %></td>
           <td>
-            <a href="/notice_view">#공지 서문야시장 거리예술제 일정 변경안내.</a>
-            <p>재난 안전 본부로부터 호우주의보 발령으로 안전을위해 거리예술제의 일정이 변경 되었습니다.</p>
+            <a href="/notice_view"><%= row.tag %> <%= row.title %></a>
+            <p><%= row.content %></p>
           </td>
           <td>3,241</td>
           <td><a href="/notice_view" class="more_arrow"></a></td>
         </tr>
       </tbody>
+      <% }); %>
     </table>
   </div>
   
