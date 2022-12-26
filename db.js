@@ -1,9 +1,10 @@
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
-  host     : 'database-1.c4ovvgfbmftw.ap-northeast-2.rds.amazonaws.com',
+  host     : 'database-2.c4ovvgfbmftw.ap-northeast-2.rds.amazonaws.com',
   user     : 'root',
   password : 'fc346754',
-  database : 'seomoon02'
+  database : 'seomoon_02',
+  multipleStatements:true,
 });
 //w3school에서 복사한 부분
 connection.connect(function(err){
@@ -21,5 +22,5 @@ function getMemo(callback){
  
 //1202수정 여러개의 모듈을 내보내는 방법 : {}로 묶고 ,를 찍어서 사용한다
 module.exports = {
-  seomoon_02
+  getMemo
 }
