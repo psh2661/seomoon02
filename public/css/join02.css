@@ -1,0 +1,66 @@
+.join_tit{
+  padding-bottom: 30px;
+}
+form{
+  margin-top: 10px;
+}
+table{
+  margin: 0 auto;
+}
+td{
+  padding-top: 10px;
+}
+input{
+  width: 300px;
+  /* margin-top: 20px; */
+  padding: 10px 10px 10px 10px;
+  align-items: center;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #444;
+}
+p{
+  font-size: 14px;
+  color: #888;
+}
+.deco{
+  font-weight: 500;
+  color: #444;
+}
+input:focus {outline:none;}
+/* 버튼 */
+#id_check {
+  width: 100px; height: auto;
+  display: block;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #4D7BBE;
+  border: 2px solid #4D7BBE;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#id_check:hover {
+  background-color: #4D7BBE;
+  border: 2px solid #4D7BBE;
+  box-sizing: border-box;
+}
+#join_ok {
+  width: 200px;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 0;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #4D7BBE;
+  border: 2px solid #4D7BBE;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#join_ok:hover {
+  color: #4D7BBE;
+  background-color: #fff;
+  border: 2px solid #4D7BBE;
+  box-sizing: border-box;
+}

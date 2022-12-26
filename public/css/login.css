@@ -1,0 +1,164 @@
+.welcom_wrap {
+  padding-top: 100px;
+  text-align: center;
+}
+.welcom_wrap>h4>span{
+  font-size: 32px;
+}
+.welcom_wrap > h1 {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  font-size: 60px;
+  color: #4D7BBE;
+}
+/*  */
+#login_form > input {
+  width: 300px;
+  height: 48px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  border: 2px solid #4D7BBE;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+}
+#login_form > input[type="text"] {
+  padding-left: 20px;
+  font-size: 20px;
+}
+#login_form > input[type="password"] {
+  padding-left: 20px;
+  font-size: 20px;
+}
+#login_form > input::placeholder {
+  font-size: 16px;
+  color: #999999;
+}
+#login_form > input[type="submit"] {
+  width: 150px;
+  display: block;
+  margin: 0 auto 10px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #4D7BBE;
+  border: 2px solid #4D7BBE;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#login_form > input[type="submit"]:hover {
+  transition: 0.3s;
+  color: #4D7BBE;
+  background-color: #fff;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  vertical-align:-4px;
+  outline: none !important;
+  border: 1px solid #999999;
+  border-radius: 2px;
+  background: #fbfbfb;
+}
+input[type="checkbox"]::before {
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: scale(0) translate(-50%, -50%);
+  line-height: 1;
+}
+input[type="checkbox"]:hover {
+  border-color: #4D7BBE;
+}
+input[type="checkbox"]:checked {
+  background-color: #4D7BBE;
+  border-color: #4D7BBE;
+  color: white;
+}
+input[type="checkbox"]:checked::before {
+  border-radius: 2px;
+  transform: scale(1) translate(-50%, -50%);
+}
+.simple_login {
+  padding-top: 20px;
+  text-align: center;
+}
+.simple_login>p{
+  padding-bottom: 5px;
+  font-size: 16px;
+  color: #999999;
+}
+.simple_login > ul {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.simple_login > ul > li {
+  padding-top: 20px;
+}
+.simple_login > h1 {
+  padding-top: 30px;
+  color: #4D7BBE;
+  font-size: 23px;
+}
+.simple_login > h2 {
+  padding-top: 30px;
+  color: #999999;
+  font-size: 16px;
+  font-weight: 400;
+}
+.simple_login > ul > li > a {
+  padding-top: 60px;
+  color: #999999;
+  font-weight: 500;
+}
+.kakao {
+  width: 52px;
+  display: block;
+  background-image: url(../img/kakao_login.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.google {
+  width: 52px;
+  display: block;
+  background-image: url(../img/google_login.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.naver {
+  width: 52px;
+  display: block;
+  background-image: url(../img/naver_login.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.find_login {
+  padding-top: 5px;
+}
+.id_find {
+  padding-top: 30px;
+  color: #4D7BBE;
+  font-size: 16px;
+  font-weight: 500;
+}
+span {
+  color: #4D7BBE;
+  font-size: 15px;
+}
+.pw_find {
+  padding-top: 30px;
+  color: #4D7BBE;
+  font-size: 16px;
+  font-weight: 500;
+}

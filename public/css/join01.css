@@ -1,0 +1,142 @@
+*{margin: 0;padding: 0;box-sizing: border-box}
+/* ul>li{list-style: none}
+a{text-decoration: none;} */
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.join_tit{
+  padding-bottom: 30px;
+}
+/* ================== */
+
+#joinForm{
+  width: 414px;
+  margin: 0 auto;
+}
+.checkBox,.checkBox>ul{
+  position: relative;
+}
+/* .checkBox>ul>li{
+  float: left;
+} */
+.checkBox>ul>li:first-child{
+  width: 85%;
+  padding: 10px;
+  font-weight: 500;
+  color: #000;
+}
+.checkBox>ul>li:nth-child(2){
+  position: absolute;
+  top: 50%; right: 30px;
+  margin-top: -12px;
+}
+.checkBox textarea{
+  width: 414px; height: 120px; 
+  resize: none;
+  outline: none;
+  /* margin: 0 2%; */
+  background-color: #fff;
+  color: #888; 
+  border: 1px solid #4D7BBE;
+  box-sizing: border-box;
+}
+textarea::-webkit-scrollbar {
+  width: 10px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: #4D7BBE;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+textarea::-webkit-scrollbar-track {
+  background-color: #fff;
+  /* box-shadow: inset 0px 0px 5px white; */
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  vertical-align:-2px;
+  outline: none !important;
+  border: 1px solid #888;
+  border-radius: 2px;
+  background: #fbfbfb;
+}
+input[type="checkbox"]::before {
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: scale(0) translate(-50%, -50%);
+  line-height: 1;
+}
+input[type="checkbox"]:hover {
+  border-color: #4D7BBE;
+}
+input[type="checkbox"]:checked {
+  background-color: #4D7BBE;
+  border-color: #4D7BBE;
+  color: white;
+}
+input[type="checkbox"]:checked::before {
+  border-radius: 2px;
+  transform: scale(1) translate(-50%, -50%);
+}
+
+.footBtwrap{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.footBtwrap>li{
+  width: 100%;
+}
+.footBtwrap>li>button{
+  display: block; 
+  width: 200px;
+  text-align: center;
+}
+.fpmgBt1{
+  width: 200px;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 0;
+  border-radius: 6px;
+  color: #4D7BBE;
+  font-size: 16px;
+  background-color: #fff;
+  border: 2px solid #4D7BBE;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.fpmgBt1:hover{
+  transition: 0.3s;
+  color: #fff;
+  background-color: #4D7BBE;
+}
+.fpmgBt2{
+  width: 200px;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 0;
+  border-radius: 6px;
+  color: #4D7BBE;
+  font-size: 16px;
+  background-color: #fff;
+  border: 2px solid #4D7BBE;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.fpmgBt2:hover{
+  transition: 0.3s;
+  color: #fff;
+  background-color: #4D7BBE;
+}

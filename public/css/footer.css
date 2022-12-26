@@ -1,0 +1,142 @@
+footer{
+  text-align: center;
+  background-color: #eee;
+}
+/* sec_etc */
+.etc_wrap{
+  width: 100%;
+}
+.etc_wrap>ul{
+  display: flex;
+}
+.etc_wrap>ul>li{
+  flex: 1;
+}
+.youtube{
+  width: 100%; height: 500px;
+  display: block;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+
+.gallery{
+  width: 100%; height: 500px;
+  display: block;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+
+.event{
+  width: 100%; height: 500px;
+  display: block;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+/* sec_etc end */
+
+/* f_cm */
+.f_cm{
+  padding-top: 40px;
+}
+.f_cm>ul{
+  display: flex;
+}
+.f_cm>ul>li{
+  flex: 1;
+}
+.cm_food{
+  margin-right: 10px;
+  height: 170px;
+  background-color: #fff;
+}
+.cm_store{
+  height: 170px;
+  background-color: #fff;
+}
+/* f_cm end */
+/* supporter */
+.supporter{
+  padding-top: 30px;
+}
+.supporter>ul{
+  display: flex;
+}
+.supporter>ul>li{
+  flex: 1;
+}
+
+.jung{
+  margin-right: 10px;
+  height: 65px;
+  display: block;
+  background-image: url(../img/jung.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.dtms{
+  margin-right: 10px;
+  height: 65px;
+  display: block;
+  background-image: url(../img/dtms.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.daegu{
+  margin-right: 10px;
+  height: 65px;
+  display: block;
+  background-image: url(../img/daegu.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.mss{
+  margin-right: 10px;
+  height: 65px;
+  display: block;
+  background-image: url(../img/mss.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.semas{
+  height: 65px;
+  display: block;
+  background-image: url(../img/semas.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+/* supporter end */
+/* f_txt_wrap */
+.f_con_wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+.f_logo{
+  width: 197px; height: 68px;
+  /*height: auto;*/
+}
+.f_txt>p{
+font-size: 13px;
+}
+.f_txt>a{
+  font-size: 12px;
+  color: #4D7BBE;
+}
+.f_txt>span{
+  font-size: 12px;
+  color: #4D7BBE;
+}
+.sns>ul{
+  display: flex;
+}
+.sns>ul>li{
+  width: 32px; height: 32px;
+  background-color: #fff;
+}
+/* f_txt_wrap end */
