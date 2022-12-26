@@ -1,3 +1,14 @@
+// header 중복방지
+let header2 = document.querySelector('#header')
+if (window.location.pathname == '/join01') {
+  header.style.display = 'none';
+}
+// footer 중복방지
+let footer2 = document.querySelector('#footer')
+if (window.location.pathname == '/join01') {
+  footer.style.display = 'none';
+}
+
 // 동의 모두선택 / 해제
 const agreeChkAll = document.querySelector('input[name=agree_all]');
     agreeChkAll.addEventListener('change', (e) => {

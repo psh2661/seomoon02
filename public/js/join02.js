@@ -1,3 +1,14 @@
+// header 중복방지
+let header3 = document.querySelector('#header')
+if (window.location.pathname == '/join02') {
+  header.style.display = 'none';
+}
+// footer 중복방지
+let footer3 = document.querySelector('#footer')
+if (window.location.pathname == '/join02') {
+  footer.style.display = 'none';
+}
+
 //joinform_check 함수로 유효성 검사
 function joinform_check() {
   //변수에 담아주기

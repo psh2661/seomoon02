@@ -1,3 +1,14 @@
+// header 중복방지
+let header = document.querySelector('#header')
+if (window.location.pathname == '/login') {
+  header.style.display = 'none';
+}
+// footer 중복방지
+let footer = document.querySelector('#footer')
+if (window.location.pathname == '/login') {
+  footer.style.display = 'none';
+}
+
 //joinform_check 함수로 유효성 검사
 function login_check() {
   //변수에 담아주기
