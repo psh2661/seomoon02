@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- 로그인,회원가입 -->
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/join01.css">
+  <link rel="stylesheet" href="css/join02.css">
+  <!-- 공지사항 -->
+  <link rel="stylesheet" href="css/notice_list.css">
+  <link rel="stylesheet" href="css/notice_view.css">
+  <link rel="stylesheet" href="css/notice_write.css">
+  <link rel="stylesheet" href="css/notice_fix.css">
+  <!-- 썸네일(갤러리) -->
+  <link rel="stylesheet" href="css/thum_list.css">
+  <link rel="stylesheet" href="css/thum_write.css">
+  <!-- 풋터 -->
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/sub_footer.css">
+  <title>seomoon</title>
+</head>
+<body>
+  <div id="header">
+    <%- include('header') %>
+  </div>
+  <main>
+    <%- body %>
+  </main>
+  <div id="footer">
+    <%- include('footer') %>
+  </div>
+</body>
+
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
+<script src="js/join01.js"></script>
+<script src="js/join02.js"></script>
+</html>
