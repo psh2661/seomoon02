@@ -5,6 +5,7 @@ var connection = mysql.createConnection({
   password : 'fc346754',
   database : 'seomoon_02',
   multipleStatements:true,
+  dateStrings: 'date'
 });
 //w3school에서 복사한 부분
 connection.connect(function(err){
