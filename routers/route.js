@@ -1,3 +1,7 @@
+const multer  = require('multer')
+const fs = require("fs");
+
+
 const express = require('express');
 const router = express.Router();
 const path = require('path');
@@ -112,4 +116,16 @@ const html = `<!doctype html>
     console.log(user_phone);
   });
   
+  const upload = multer({
+    storage: multer.diskStorage({
+        destination(req, file, done) {
+            done(null, "../public/uploads/");
+        },
+        filename(req, file, done) {
+            const ext = path.extname(file.originalname); //파일의 확장자
+            done(null, path.basename(file.originalname, ext) + Date.now() + ext); //파일명 + 날짜 _ 확장자명
+        },
+    }),
+    limits: { fileSize: 1920 * 1024 * 5 }, //1024*1024*2 => 2메가 까지 업로드 가능
+  });
   module.exports = router;

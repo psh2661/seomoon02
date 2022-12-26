@@ -5,7 +5,7 @@ var connection = mysql.createConnection({
   password : 'fc346754',
   database : 'seomoon02'
 });
-//1202수정 w3school에서 복사한 부분
+//w3school에서 복사한 부분
 connection.connect(function(err){
   if (err) throw err;
   console.log("connected!")
@@ -21,5 +21,5 @@ function getMemo(callback){
  
 //1202수정 여러개의 모듈을 내보내는 방법 : {}로 묶고 ,를 찍어서 사용한다
 module.exports = {
-  getMemo,insertMemo
+  seomoon_02
 }
