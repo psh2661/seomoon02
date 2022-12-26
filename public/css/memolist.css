@@ -1,0 +1,152 @@
+.memolist_wrap h3{
+  text-align: center;
+  border-bottom: 2px solid #333;
+}
+/* 리스트 타이틀 */
+.memolist_title ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+}
+.memolist_title ul li{
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 65px;
+}
+.memo_list_num{
+  flex: 1;
+}
+.memo_list_cont{
+  flex: 3;
+}
+.memo_list_write{
+  flex: 1;
+}
+.memo_list_day{
+  flex: 1;
+}
+.memo_list_view{
+  flex: 1;
+}
+/* 리스트 바디 */
+.memolist_body ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+}
+.memolist_body ul li{
+  font-size: 14px;
+  text-align: center;
+  line-height: 65px;
+  
+}
+.memolist_body ul li:hover{
+  cursor: pointer;
+}
+/* 리스트 바디 콘트 */
+.memolist_body .memolist_cont{
+  text-align: center;
+  font-size: 14px;
+  background-color: #eee;
+
+  /* js 관련 추가*/
+  max-height: 0;
+  overflow: hidden;
+  transition: all .7s ease;
+}
+/* 글작성 버튼 */
+.writeMemo_btn_box{
+  text-align: right;
+}
+#writeMemo_btn{
+  width: 100px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  background-color: #172E44;
+  color: #EDEDF4;
+  cursor: pointer;
+}
+/* 글 삭제 수정 버튼 */
+.emend_delete_btn_box{
+  text-align: right;
+  margin-top: 20px;
+}
+/* 수정버튼 */
+#emend_btn{
+  width: 60px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  background-color: #172E44;
+  color: #EDEDF4;
+  cursor: pointer;
+}
+/* 삭제버튼 */
+#delete_btn{
+  width: 60px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid #172E44;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #EDEDF4;
+  color: #172E44;
+  cursor: pointer;
+}
+/* 모바일 */
+@media only screen and (max-width:560px){
+  .memolist_title ul li{
+    font-size: 14px;
+  }
+  .memolist_body ul li{
+    font-size: 12px;
+  }
+  .memo_list_cont{
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  #writeMemo_btn{
+    font-size: 12px;
+  }
+
+  /* 수정버튼 */
+  #emend_btn{
+    font-size: 12px;
+  }
+  /* 삭제버튼 */
+  #delete_btn{
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width:410px){
+  .memolist_title ul li{
+    font-size: 13px;
+    line-height: 40px;
+  }
+  .memolist_body ul li{
+    font-size: 10px;
+    line-height: 40px;
+  }
+  #writeMemo_btn{
+    font-size: 10px;
+  }
+
+  /* 수정버튼 */
+  #emend_btn{
+    width: 40px;
+    font-size: 10px;
+  }
+  /* 삭제버튼 */
+  #delete_btn{
+    width: 40px;
+    font-size: 10px;
+  }
+}

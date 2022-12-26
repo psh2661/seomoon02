@@ -1,0 +1,39 @@
+<div class="memolist_wrap w1280 pb70">
+    <h3 class="pt70 pb70">게시판 리스트 페이지</h3>
+    <article class="memolist_table_wrap">
+    <div class="memolist_title">
+      <ul>
+        <li class="memo_list_num">번호</li>
+        <li class="memo_list_cont">제목</li>
+        <li class="memo_list_write">작성자</li>
+        <li class="memo_list_day">등록일</li>
+        <li class="memo_list_view">조회수</li>
+      </ul>
+    </div>
+    <% rows.forEach((row,index)=>{  %>
+    <div class="memolist_body">
+      <ul class="memolist">
+        <li class="memo_list_num"><%= row.num %></li>
+        <li class="memo_list_cont"><%= row.title %></li>
+        <li class="memo_list_write"><%= row.wirte %></li>
+        <li class="memo_list_day"><%= row.create_time %></li>
+        <li class="memo_list_view"><%= row.view %></li>
+      </ul>
+      <div class="memolist_cont">
+        <p><%= row.cont %></p>
+        <!-- 수정,삭제버튼 -->
+        <div class="emend_delete_btn_box">
+          <button type="button" id="emend_btn" onclick="javascript:location.href='/updateM?num=<%= row.num %>'">수정</button>
+          <button type="button" id="delete_btn" onclick="javascript:location.href='/deleteM?num=<%= row.num %>'">삭제</button>
+        </div>
+      </div>
+    </div>
+    <% }); %>
+    <!-- 글작성 버튼 -->
+    <div class="writeMemo_btn_box pt70">
+      <button type="button" id="writeMemo_btn" onclick="location.href='/newmemo'">글쓰기</button>
+    </div>
+  </article>
+</div>
+
+<script src="js/memolist.js"></script>

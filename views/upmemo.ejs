@@ -1,0 +1,31 @@
+<div class="upMemo_wrap w1280 pb70">
+    <h3 class="pt70">게시판 수정하는 페이지</h3>
+    <form method="post" action="/upMemo" id="upMemo_form">
+        <div>
+            <input type="hidden" name="upMemo_num" class="upMemo_num" value="<%= row.num %>">
+        </div>
+        <div class="upMemo_day_box">
+            <p>날짜</p>
+            <input type="text" name="upMemo_day" class="upMemo_day" value="<%= row.create_time %>">
+        </div>
+        <div class="upMemo_view_box">
+            <p>조회수</p>
+            <input type="text" name="upMemo_view" class="upMemo_view" value="<%= row.view %>">
+        </div>
+      <div class="upMemo_name_box">
+          <p>작성자</p>
+          <input type="text" name="upMemo_name" class="upMemo_name" value="<%= row.wirte %>">
+      </div>
+      <div class="upMemo_title_box">
+          <p>제목</p>
+          <input type="text" name="upMemo_title" class="upMemo_title" value="<%= row.title %>">
+      </div>
+      <div class="upMemo_cont_box">
+          <textarea name="upMemo_cont" class="upMemo_cont">value="<%= row.cont %>"</textarea>
+      </div>
+      <div class="upMemo_btn_box pt70">
+          <input type="reset" value="취소" class="upMemo_reset" onclick="javascript:location.href='/memolist'">
+          <input type="submit" value="수정완료" class="upMemo_check">
+      </div>
+    </form>
+</div>

@@ -1,0 +1,158 @@
+.upMemo_wrap h3{
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+/* 날짜 */
+.upMemo_day_box{
+  margin: 50px 0 20px;
+  display: flex;
+}
+.upMemo_day_box p{
+  font-size: 17px;
+  width: 80px;
+  line-height: 30px;
+  text-align: left;
+}
+.upMemo_day_box .upMemo_day{
+  width: 300px;
+}
+/* 조회수 */
+.upMemo_view_box{
+  margin-bottom: 20px;
+  display: flex;
+}
+.upMemo_view_box p{
+  font-size: 17px;
+  width: 80px;
+  line-height: 30px;
+  text-align: left;
+}
+.upMemo_view_box .upMemo_view{
+  width: 300px;
+}
+/* 작성자 */
+.upMemo_name_box{
+  display: flex;
+}
+.upMemo_name_box p{
+  font-size: 17px;
+  width: 80px;
+  line-height: 30px;
+  text-align: left;
+}
+.upMemo_name_box .upMemo_name{
+  width: 300px;
+}
+/* 제목 */
+.upMemo_title_box{
+  margin: 20px 0 50px;
+  display: flex;
+}
+.upMemo_title_box p{
+  font-size: 17px;
+  width: 80px;
+  line-height: 30px;
+  text-align: left;
+}
+.upMemo_title_box .upMemo_title{
+  width: 300px;
+}
+/* 내용 */
+.upMemo_cont_box .upMemo_cont{
+  width: 100%;
+  height: 300px;
+}
+/* 버튼 */
+.upMemo_btn_box{
+  text-align: right;
+}
+.upMemo_btn_box>input{
+  width: 100px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+}
+.upMemo_btn_box>.upMemo_reset{
+  margin-right:10px;
+  background-color: #EDEDF4;;
+  color: #172E44;
+  cursor: pointer;
+}
+.upMemo_btn_box>.upMemo_check{
+  background-color: #172E44;
+  color: #EDEDF4;
+  cursor: pointer;
+}
+
+/* 모바일 */
+@media only screen and (max-width:560px) {
+  /* 작성자 */
+  .upMemo_name_box p{
+    font-size: 14px;
+    width: 50px;
+  }
+  .upMemo_name_box .upMemo_name{
+    width: 150px;
+  }
+  /* 날짜 */
+  .upMemo_day_box{
+    margin: 30px 0 10px;
+  }
+  .upMemo_day_box p{
+    font-size: 14px;
+    width: 50px;
+  }
+  .upMemo_day_box .upMemo_day{
+    width: 150px;
+  }
+  /* 제목 */
+  .upMemo_title_box{
+    margin: 10px 0 30px;
+  }
+  .upMemo_title_box p{
+    font-size: 14px;
+    width: 50px;
+  }
+  .upMemo_title_box .upMemo_title{
+    width: 180px;
+  }
+  /* 조회수 */
+  .upMemo_view_box{
+    margin-bottom: 10px;
+  }
+  .upMemo_view_box p{
+    font-size: 14px;
+    width: 50px;
+  }
+  .upMemo_view_box .upMemo_view{
+    width: 150px;
+  }
+
+  /* 버튼 */
+  .upMemo_btn_box>input{
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width:410px) {
+  /* 작성자 */
+  .upMemo_name_box p{
+    font-size: 13px;
+  }
+  /* 날짜 */
+  .upMemo_day_box p{
+    font-size: 13px;
+  }
+  /* 제목 */
+  .upMemo_title_box p{
+    font-size: 13px;
+  }
+  /* 조회수 */
+  .upMemo_view_box p{
+    font-size: 13px;
+  }
+  /* 버튼 */
+  .upMemo_btn_box>input{
+    font-size: 10px;
+  }
+}

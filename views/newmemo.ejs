@@ -1,0 +1,28 @@
+<div class="newMemo_wrap w1280 pb70">
+    <h3 class="pt70">게시판 작성하는 페이지</h3>
+    <form method="post" action="/writeMemo" id="newMemo_form">
+    <div class="newMemo_day_box">
+        <p>날짜</p>
+        <input type="text" name="newMemo_day" class="newMemo_day">
+    </div>
+    <div class="newMemo_view_box">
+        <p>조회수</p>
+        <input type="text" name="newMemo_view" class="newMemo_view">
+    </div>
+      <div class="newMemo_name_box">
+          <p>작성자</p>
+          <input type="text" name="newMemo_name" class="newMemo_name">
+      </div>
+      <div class="newMemo_title_box">
+          <p>제목</p>
+          <input type="text" name="newMemo_title" class="newMemo_title">
+      </div>
+      <div class="newMemo_cont_box">
+          <textarea name="newMemo_cont" class="newMemo_cont"></textarea>
+      </div>
+      <div class="newMemo_btn_box pt70">
+          <input type="reset" value="취소" class="writeMemo_reset" onclick="javascript:location.href='/memolist'">
+          <input type="submit" value="확인" class="writeMemo_check" onclick="javascript:location.href='/memolist'">
+      </div>
+    </form>
+</div>

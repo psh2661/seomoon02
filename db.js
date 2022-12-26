@@ -12,47 +12,48 @@ connection.connect(function(err){
   if (err) throw err;
   console.log("connected!")
 })
- 
-//메모를 추출할때
-function notice(callback) {
-  connection.query("SELECT * FROM memoTable ORDER BY id desc", (err, rows) => {
-      if (err) throw err;
-      callback(rows);
-  });
-}
-//메모를 입력할때
-function insertMemo(title, name, content, callback) {
-  connection.query(`insert into memotable (create_time, name,title,content) values (NOW(), '${name}','${title}','${content}')`, (err) => {
-      if (err) throw err;
-      callback();
-  });
-}
-//메모중 아이디가 일치하는 데이터 추출(내보내는 건 못함)
-//아이디는 프라이머리 키로 공통된 숫자 불가능
-function getMemoByid(id, callback) {
-  //한줄을 다 불러올때는 from + 'table 이름" + 없음
-  connection.query(`SELECT * FROM memotable where id=${id}`, (err, row) => {
-      if (err) throw err;
-      callback(row);
-  });
-}
-//아이디가 일치하는 부분을 update한 내용 내보내기
-function updateMemo(id, title, name, content, callback) {
-  connection.query(`UPDATE memotable set create_time=now(), name='${name}',title='${title}',content='${content}' where id=${id}`, (err) => {
-      if (err) throw err;
-      callback();
-  });
+ //메모
+function getMemo(callback){
+  connection.query('SELECT * FROM memos ORDER BY num desc',(err,rows)=>{
+    if (err) throw err;
+    callback(rows);
+  })
 }
 
-//아이디가 일치하면 삭제하기
-function deleteMemo(id, callback) {
-  connection.query(`DELETE from memotable WHERE id=${id}`, (err) => {
-      if (err) throw err;
-      callback();
-  });
+
+//메모 입력
+function insertMemo(newMemo_view,newMemo_name,newMemo_title,newMemo_cont,callback){
+  connection.query(`INSERT INTO memos(create_time,view,wirte,title,cont) VALUES 
+  (NOW(),'${newMemo_view}','${newMemo_name}','${newMemo_title}','${newMemo_cont}')`,(err) => {
+    if (err) throw err;
+    callback();
+  })
 }
 
-//1202수정 여러개의 모듈을 내보내는 방법 : {}로 묶고 ,를 찍어서 사용한다
+//프라이머리키 일치하는 테이블만 추출
+function getMemoByid(num, callback){
+  connection.query(`SELECT * FROM memos WHERE num = ${num}`, (err,row)=>{
+    if (err) throw err;
+    callback(row);
+  })
+}
+
+//프라이머리키 일치하는 부분 수정
+function updateMemo(upMemo_num,upMemo_view,upMemo_name,upMemo_title,upMemo_cont,callback){
+  connection.query(`UPDATE memos SET create_time= now(),view='${upMemo_view}',wirte='${upMemo_name}',title='${upMemo_title}',cont='${upMemo_cont}' WHERE num =${upMemo_num}`,(err)=>{
+    if (err) throw err;
+    callback();
+  })
+}
+
+//프라이머리키 일치하는 부분 삭제
+function deleteByid(num,callback){
+  connection.query(`DELETE FROM memos WHERE num=${num}`,(err)=>{
+    if (err) throw err;
+    callback();
+  })
+}
+
 module.exports = {
-  notice,insertMemo,getMemoByid,updateMemo,deleteMemo
+  getMemo,insertMemo,getMemoByid,updateMemo,deleteByid
 }

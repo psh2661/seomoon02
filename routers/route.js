@@ -24,29 +24,63 @@ const html = `<!doctype html>
   })
   
   //공지사항 연결
-  // 리스트
-  // router.get('/notice_list',(req, res) => {
-  //   res.render('notice_list'); 
-  // })
-  router.get("/notice_list", (req, res) => {
-    db.getMemo((rows) => {
-        res.render("notice_list", { rows: rows }); //ejs의 rows를 받아서 rows라는 이름으로 보낸다
-    });
-  });
+  //게시판 작성 연결
+router.get('/newmemo', (req, res) => {
+  res.render('newmemo');
+});
+//게시판 작성 값 연결
+router.post('/writeMemo',(req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  let newMemo_view = param['newMemo_view'];
+  let newMemo_name = param['newMemo_name'];
+  let newMemo_title = param['newMemo_title'];
+  let newMemo_cont = param['newMemo_cont'];
+  db.insertMemo(newMemo_view,newMemo_name,newMemo_title,newMemo_cont,()=>{
+    res.redirect('/memolist');
+  })
+});
 
-  // 작성
-  router.post("/notice_write", (req, res) => {
-    let param = JSON.parse(JSON.stringify(req.body));
-    let date = param['date'];
-    let user_name = param['user_name'];
-    let teg = param['teg'];
-    let title = param['title'];
-    let content = param['content'];
-    db.insertMemo(date, user_name, teg, title, content, () => {
-        res.redirect("/notice_list"); //redirect 에는 / 붙인다
-    });
-  });
+//게시판 리스트 연결
+router.get('/memolist', (req, res) => {
+  db.getMemo((rows)=>{
+    res.render('memolist',{rows:rows}); 
+  })
+});
 
+
+//게시판 수정페이지 연결
+router.get('/upmemo', (req, res) => {
+  res.render('upmemo');
+});
+//게시판 수정 연결
+router.post('/upMemo', (req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  let upMemo_num = param['upMemo_num']
+  let upMemo_view = param['upMemo_view'];
+  let upMemo_name = param['upMemo_name'];
+  let upMemo_title = param['upMemo_title'];
+  let upMemo_cont = param['upMemo_cont'];
+  db.updateMemo(upMemo_num,upMemo_view,upMemo_name,upMemo_title,upMemo_cont,()=>{
+    res.redirect('/memolist');
+  })
+});
+
+
+//뷰어에 수정버튼 추가 후 연결
+router.get('/updateM',(req, res) => {
+  let num = req.query.num;
+  db.getMemoByid(num,(row)=>{
+    res.render('upmemo',{row:row[0]})
+  })
+});
+
+//뷰어에 삭제버튼 추가 후 연결
+router.get('/deleteM',(req, res) => {
+  let num = req.query.num;
+  db.deleteByid(num,()=>{
+    res.redirect('/memolist')
+  })
+});
   
   //로그인 연결
   router.get('/login',(req, res) => {
