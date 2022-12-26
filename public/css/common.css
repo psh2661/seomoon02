@@ -57,11 +57,6 @@ h5{
   font-weight: 300;
   margin-bottom: 35px;
 }
-/* .w1280 {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-} */
 .w420 {
   width: 100%;
   max-width: 414px;
@@ -69,20 +64,4 @@ h5{
 }
 a {
   text-decoration: none;
-}
-/* 회원가입 타이틀*/
-.join_tit {
-  padding-top: 100px;
-  font-size: 3.625rem;
-  font-weight: bold;
-  color: #425f57;
-  display: flex;
-  justify-content: center;
-}
-/* 회원가입 타이틀 (정보입력)*/
-.join_sub_tit {
-  padding-top: 30px;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #749f82;
 }
