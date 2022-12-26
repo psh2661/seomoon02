@@ -24,82 +24,20 @@ const html = `<!doctype html>
   })
   
   //공지사항 연결
-  //리스트 페이지
-  router.get("/notice_write", (req, res) => {
-    res.render("notice_write"); 
-  });
-  router.get("/notice_list", (req, res) => {
-    db.notice((rows) => {
-        res.render("notice_list", { rows: rows });
-    });
-  });
-  //작성 페이지
-  router.post("/notice_write", (req, res) => {
-    let param = JSON.parse(JSON.stringify(req.body));
-    let date = param['date'];
-    let user_name = param['user_name'];
-    let teg = param['teg'];
-    let title = param['title'];
-    let content = param['content'];
-    db.insertMemo(date, user_name, teg, title, content, () => {
-        res.redirect("/notice_list"); //redirect 에는 / 붙인다
-    });
-    //내가 원하는 페이지{내가 보낼것} 나는 notice_detail.ejs 페이지에 notice_write_info라는 이름으로 보낼거야
-    // res.render("memoList.ejs", { "writeMemo": param });
-    // res.render("notice.ejs", { "notice_write_info": param });
-  });
-  router.get("/notice_view", (req, res) => {
-      let id = req.query.id;
-      console.log(id);
-      //getMemobyId는 그냥 지어준 이름
-      db.getMemoByid(id, (row) => {
-          res.render("notice_view", { row: row[0] });
-      });
-  });
-  router.get("/updateM", (req, res) => {
-      let id = req.query.id;
-      console.log(id);
-      //getMemobyId는 그냥 지어준 이름
-      db.getMemoByid(id, (row) => {
-          res.render("updateMemo", { row: row[0] });
-      });
-  });
-  // router.get('/notice_write',(req, res) => {
-  //   res.render('notice_write'); 
-  //   let param = JSON.parse(JSON.stringify(req.body));
-  //   let title = param['title'];
-  //   let name = param['name'];
-  //   let date = param['date'];
-  //   let content = param['content'];
-  //   let pw = param['pw'];
-  //   console.log(title);
-  //   console.log(name);
-  //   console.log(date);
-  //   console.log(content);
-  //   console.log(pw);
-  //   res.render('notice_view',{'data':param});
+  // 리스트
+  // router.get('/notice_list',(req, res) => {
+  //   res.render('notice_list'); 
   // })
-
-  //상세 페이지
-  router.get('/notice_view',(req, res) => {
-    res.render('notice_view'); 
-  })
-
-  //수정 페이지
-  router.post('/notice_fix',(req, res) => {
-    let param = JSON.parse(JSON.stringify(req.body));
-    let title = param['title'];
-    let name = param['name'];
-    let date = param['date'];
-    let content = param['content'];
-    let pw = param['pw'];
-    console.log(title);
-    console.log(name);
-    console.log(date);
-    console.log(content);
-    console.log(pw);
-    res.render('notice_view',{'data':param});
+  router.get("/memoList", (req, res) => {
+    db.getMemo((rows) => {
+        res.render("memoList", { rows: rows }); //ejs의 rows를 받아서 rows라는 이름으로 보낸다
+    });
+    // let title = param["title"];
+    // let id = param["writer"];
+    // let pw = param["password"];
+    // let content = param["content"];
   });
+
   
   //로그인 연결
   router.get('/login',(req, res) => {
